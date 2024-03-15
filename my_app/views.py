@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 
 from my_app.forms import project_form
+from my_app.models import project
 
 
 # Create your views here.
@@ -20,5 +21,10 @@ def formhtml(request):
     # print(data)
     return render(request,'modelform.html',{'formkey':data})
 
+def new(request):
+    return render(request,'new.html')
 
 
+def data(request):
+    todo=project.objects.all()
+    return render(request,'child.html',{'todokey':todo})

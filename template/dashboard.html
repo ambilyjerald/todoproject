@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
+{%load crispy_forms_tags %}
+
 
 <head>
   <!-- Required meta tags -->
@@ -150,7 +152,7 @@
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
                   <div class="preview-icon bg-info">
-                    <i class="typcn typcn-user mx-0"></i> 
+                    <i class="typcn typcn-user mx-0"></i>
                   </div>
                 </div>
                 <div class="preview-item-content">
@@ -772,7 +774,13 @@
           <div class="row">
             <div class="col-md-12">
               <div class="card">
-                <h1>Welcome ToDo</h1>
+                {% block content %}
+                  <h2>welcome TODO</h2>
+                 {% endblock %}
+
+
+
+
 <!--                <div class="table-responsive pt-3">-->
 <!--                  <table class="table table-striped project-orders-table">-->
 <!--                    <thead>-->
@@ -889,7 +897,7 @@
 <!--                      </tr>-->
 <!--                    </tbody>-->
 <!--                  </table>-->
-                </div>
+<!--                </div>-->
               </div>
             </div>
           </div>
@@ -904,8 +912,8 @@
                         <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 <a href="https://www.bootstrapdash.com/" class="text-muted" target="_blank">Bootstrapdash</a>. All rights reserved.</span>
                         <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center text-muted">Free <a href="https://www.bootstrapdash.com/" class="text-muted" target="_blank">Bootstrap dashboard</a> templates from Bootstrapdash.com</span>
                     </div>
-                </div>    
-            </div>        
+                </div>
+            </div>
         </footer>
         <!-- partial -->
       </div>

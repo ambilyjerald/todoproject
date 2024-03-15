@@ -1,0 +1,36 @@
+{% extends 'dashboard.html' %}
+{%load crispy_forms_tags %}
+
+
+{% block content %}
+
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">age</th>
+      <th scope="col">place</th>
+      <th scope="col">address</th>
+       <th scope="col">phone</th>
+       <th scope="col">email</th>
+      <th scope="col">UPDATE</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for i in todokey %}
+    <tr>
+
+      <td>{{i.Name}}</td>
+      <td>{{i.age}}</td>
+      <td>{{i.place}}</td>
+       <td>{{i.address}}</td>
+      <td>{{i.phone}}</td>
+      <td>{{i.email}}</td>
+     <td> <button type="button" class="btn btn-primary">Primary</button></td>
+    </tr>
+{% endfor %}
+  </tbody>
+</table>
+{% endblock %}
