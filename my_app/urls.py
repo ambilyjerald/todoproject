@@ -8,5 +8,6 @@ urlpatterns = [
     path("dashadmin",views.dashadmin,name='test2'),
     path('forms',views.formhtml,name='test3'),
     path('new',views.new,name='test4'),
-    path('child',views.data,name='test5')
+    path('child',views.data,name='data'),
+    path("delete/<int:id>/",views.delete_1,name='delete')
 ]

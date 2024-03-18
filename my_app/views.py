@@ -28,3 +28,8 @@ def new(request):
 def data(request):
     todo=project.objects.all()
     return render(request,'child.html',{'todokey':todo})
+
+def delete_1(request,id):
+    data=project.objects.get(id=id)
+    data.delete()
+    return redirect('data')
