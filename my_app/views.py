@@ -33,3 +33,15 @@ def delete_1(request,id):
     data=project.objects.get(id=id)
     data.delete()
     return redirect('data')
+
+# update method
+def update_1(request,id):
+    n=project.objects.get(id=id)
+    form= project_form(instance=n)
+    if request.method=="POST":
+        form= project_form(request.POST,instance=n)
+        if form.is_valid():
+            form.save()
+            return redirect("data")
+    return render(request,"update.html",{"form":form})
+
